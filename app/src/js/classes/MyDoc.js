@@ -30,3 +30,38 @@ function myFunction(a, b) {
 }
 myArray = [10, 2];
 myObject = myFunction.apply(myObject, myArray);// Will return 20
+
+/**
+ * @Heritage Simple
+ *
+ */
+function Employe() {
+    this.nom = "";
+    this.branche = "commun";
+}
+
+function Manager() {
+    this.rapports = [];
+}
+
+Manager.prototype = new Employe;
+
+function Travailleur () {
+    this.projets = [];
+}
+
+Travailleur.prototype = new Employe;
+
+function Vendeur () {
+    this.branche = "ventes";
+    this.quota = 100;
+}
+
+Vendeur.prototype = new Travailleur;
+
+function Ingénieur () {
+    this.dept = "ingénierie";
+    this.moteur = "";
+}
+
+Ingénieur.prototype = new Travailleur;

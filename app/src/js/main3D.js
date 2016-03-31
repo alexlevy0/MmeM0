@@ -94,13 +94,14 @@ jQuery(function () {
       SCENE.quality(quality);
     }
   });  
-    
+
   // scene
   var $heads = jQuery('.heads');
   var $viewport = $heads.find('.heads__viewport');
 
   SCENE.config({ quality: 1 });
   SCENE.setViewport($viewport);
+  console.log("alexandre lévy");
   SCENE.addSections([
     helloSection,
     beamsSection,
@@ -109,14 +110,15 @@ jQuery(function () {
     flowSection,
     neonsSection,
     heightSection,
-    waveSection,
-    faceSection,
-    rocksSection,
-    galaxySection,
-    gravitySection,
-    citySection,
+    //waveSection,
+    //faceSection,
+    //rocksSection,
+    //galaxySection,
+    //gravitySection,
+    //citySection,
     endSection
   ]);
+  console.log("2");
 
   SCENE.on('section:changeBegin', function () {
     var way = this.way;
