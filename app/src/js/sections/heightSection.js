@@ -13,9 +13,11 @@ var heightMap = new HeightMap({
   plane: false,
   points: false,
   maps: [
+    { name: 'H', url: './app/public/img/heightMap-H.jpg' },
     { name: 'A', url: './app/public/img/heightMap-A.jpg' },
-    { name: 'B', url: './app/public/img/heightMap-B.jpg' },
-    { name: 'O', url: './app/public/img/heightMap-O.jpg' }
+    { name: 'R', url: './app/public/img/heightMap-R.jpg' },
+    { name: 'E', url: './app/public/img/heightMap-E.jpg' },
+    { name: 'M', url: './app/public/img/heightMap-M.jpg' }
   ]
 });
 heightMap.el.position.z = -10;
@@ -23,12 +25,12 @@ heightMap.el.rotation.y = -0.6;
 heightSection.add(heightMap.el);
 
 var text = new TextPanel(
-  'L  E  T    I  T \n M  O  R  P  H',
+  '          S C R O L L E R  P O U R\n E N T R E R',
   {
     align: 'right',
     style: '',
     size: 50,
-    lineSpacing: 40,
+    lineSpacing: 40
   }
 );
 text.el.position.set(-20, 0, 0);

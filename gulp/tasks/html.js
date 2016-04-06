@@ -16,7 +16,7 @@ gulp.task('html', function () {
     ])
     .pipe(pkg.debug || false ? gutil.noop() : minify({
       collapseWhitespace: true,
-      removeComments: true,
+      removeComments: false,
       minifyJS: true,
       minifyCSS: true,
       keepClosingSlash: true

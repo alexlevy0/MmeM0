@@ -26,6 +26,7 @@ function Neon (options) {
   this.el = new THREE.Object3D();
 
   // setup 3d els
+/*
   this.tube = this.getTube();
   this.glow = this.getGlow();
 
@@ -33,6 +34,11 @@ function Neon (options) {
 
   this.el.add(this.tube);
   this.el.add(glows);
+*/
+
+  this.logo = this.getLogo();
+  this.el.add(this.logo);
+
 
   if (this.parameters.projection) {
     this.projection = this.getProjection();
@@ -254,5 +260,28 @@ Neon.prototype.getProjection = function () {
 
   return mesh;
 };
+
+/**
+ * Get logo
+ *
+ * @method getLogo
+ * @return {THREE.Mesh}
+ */
+Neon.prototype.getLogo = function () {
+  var textGeo = new THREE.PlaneGeometry(50,50);
+  var textTexture = THREE.ImageUtils.loadTexture('./app/public/img/quickText.png');
+  var textMaterial = new THREE.MeshLambertMaterial({
+    color: 0x00FFFFFF,
+    opacity: 1,
+    map: textTexture,
+    transparent: true,
+    blending: THREE.AdditiveBlending
+  });
+  var mesh = new THREE.Mesh(textGeo,textMaterial);
+
+  return mesh;
+};
+
+
 
 module.exports = Neon;

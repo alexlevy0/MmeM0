@@ -73,7 +73,7 @@ jQuery(function () {
 
     if (name === 'sounds') {
       SOUNDS.toggle();
-      $el.html(SOUNDS.isMuted() ? 'UNMUTE' : 'MUTE');
+      $el.html(SOUNDS.isMuted() ? 'SON' : 'MUET');
     }
     else if (name === 'help') {
       help.in();
@@ -83,10 +83,10 @@ jQuery(function () {
       var quality;
 
       if (SCENE.getQuality() === 0.5) {
-        text = 'QUALITY 1';
+        text = 'QUALITÉ 1';
         quality = 1;
       } else {
-        text = 'QUALITY 0.5';
+        text = 'QUALITÉ 0.5';
         quality = 0.5;
       }
 
@@ -101,7 +101,7 @@ jQuery(function () {
 
   SCENE.config({ quality: 1 });
   SCENE.setViewport($viewport);
-  console.log("alexandre lévy");
+//  console.log("alexandre lévy");
   SCENE.addSections([
     helloSection,
     beamsSection,
@@ -109,14 +109,14 @@ jQuery(function () {
     ballSection,
     flowSection,
     neonsSection,
-    heightSection,
+    heightSection
     //waveSection,
     //faceSection,
     //rocksSection,
     //galaxySection,
     //gravitySection,
     //citySection,
-    endSection
+    //endSection
   ]);
   console.log("2");
 
